@@ -1,0 +1,97 @@
+/*
+ Theme Name:   Twenty Sixteen Child Theme 
+ Author:       Aden
+ Description:  This is a child of the wordpress twentysixteen theme
+ Template:     twentysixteen
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Acme|Cabin');
+
+/* Header */
+
+.site-header {
+    background: linear-gradient(#DECBB7 , #d7c0a8);
+    padding: 0px 44px;
+    border-bottom: 3px solid #8F857D;
+}
+
+.site-branding .site-title a {
+    color: #5C5552;
+    font-family: 'Acme', sans-serif;
+    font-size: 1.2em;
+}
+
+.menu-item a {
+    color: #5C5552;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.2em;
+}
+
+
+/* Content */
+
+.site-content {
+    margin-top: 45px;
+}
+
+.page-template-default {
+    background-color: #433633;
+}
+
+#page {
+    background: #F7F0F5;
+    color: #5C5552;
+    font-family: 'Cabin', sans-serif;
+}
+
+.entry-title {
+    font-family: 'Acme', sans-serif;
+}
+
+@media screen and (min-width: 61.5625em) {
+
+    body:not(.search-results) article:not(.type-page) .entry-content {
+        width: 80%;
+        float: none;
+        margin: auto;
+    }
+}
+
+.content-area {
+    width: 100%;
+}
+
+/* Service Post Content */
+
+.service-content-top img {
+    display: inline-block;
+}
+
+.service-content-top p {
+    display: inline-block;
+}
+
+.service-content-top {
+    display: block;
+    margin-bottom: 20px;
+}
+
+table {
+    margin: 0px;
+}
+
+td, th {
+    text-align: center;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: #5C5552;
+    color: #F7F0F5;
+    padding-top: 50px;
+}
+
+.site-info a {
+    color: #F7F0F5;
+}
