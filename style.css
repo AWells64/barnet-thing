@@ -46,6 +46,7 @@
 
 .entry-title {
     font-family: 'Acme', sans-serif;
+    text-align: center;
 }
 
 @media screen and (min-width: 61.5625em) {
@@ -65,11 +66,15 @@
     width: 100%;
 }
 
+.post-thumbnail img {
+    margin: auto;
+}
+
 /* Service Cards */
 
 .service-cards {
     display: flex;
-    align-content: space-between;
+    justify-content: center;
     padding: 20px;
     flex-wrap: wrap;
 }
@@ -93,6 +98,7 @@
 
 .service-content-top img {
     display: inline-block;
+    margin-right: 30px;
 }
 
 .service-content-top p {
@@ -100,7 +106,7 @@
 }
 
 .service-content-top {
-    display: block;
+    display: flex;
     margin-bottom: 20px;
 }
 
@@ -110,6 +116,10 @@ table {
 
 td, th {
     text-align: center;
+}
+
+.type-services {
+    margin-top: 20px;
 }
 
 /* Footer */
