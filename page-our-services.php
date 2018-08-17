@@ -16,15 +16,25 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+		
+		?><div class="service-cards"><?php
+		$query_args = array(
+			'post_type' => 'post',
+			'posts_per_page' => -1,
+			'orderby' => 'rand'
+		);
 
-			// Include the page content template.
-			get_template_part( 'template-parts/content', 'page' );
+		$result = new WP_Query( $query_args );
 
-			// End of the loop.
-		endwhile;
-
+		if ( $result->have_posts() ) {
+			while ( $result->have_posts() ) : $result->the_post();
+			
+				get_template_part( 'template-parts/content', 'page-cards-our-services' );
+			
+			endwhile;
+			wp_reset_query();
+		}
+		?></div><?php
 
 		$query_args = array(
 			'post_type' => 'services',
