@@ -61,6 +61,23 @@
     width: 100%;
 }
 
+/* Service Cards */
+
+.service-cards {
+    display: flex;
+    align-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.service-cards a {
+    color: #5C5552;
+}
+
+.type-post {
+    padding: 20px;
+}
+
 /* Service Post Content */
 
 .service-content-top img {
