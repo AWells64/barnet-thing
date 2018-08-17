@@ -20,11 +20,29 @@ get_header(); ?>
 		while ( have_posts() ) : the_post();
 
 			// Include the page content template.
-			get_template_part( 'template-parts/content', 'page-home' );
+			get_template_part( 'template-parts/content', 'page-cards' );
 
 			// End of the loop.
 		endwhile;
-		?>
+
+		?><div class="service-cards"><?php
+		$query_args = array(
+			'post_type' => 'post',
+			'posts_per_page' => -1,
+			'orderby' => 'rand'
+		);
+
+		$result = new WP_Query( $query_args );
+
+		if ( $result->have_posts() ) {
+			while ( $result->have_posts() ) : $result->the_post();
+			
+				get_template_part( 'template-parts/content', 'page-cards' );
+			
+			endwhile;
+			wp_reset_query();
+		}
+		?></div>
 
 	</main><!-- .site-main -->
 
