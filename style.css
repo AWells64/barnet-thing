@@ -57,6 +57,10 @@
     }
 }
 
+.site-main > article {
+    margin-bottom: 0px;
+}
+
 .content-area {
     width: 100%;
 }
@@ -77,6 +81,12 @@
 .type-post {
     padding: 20px;
     width: 30%;
+    border: 1px solid transparent;
+}
+
+.type-post:hover {
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px black;
 }
 
 /* Service Post Content */
